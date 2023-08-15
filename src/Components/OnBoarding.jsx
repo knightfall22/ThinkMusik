@@ -1,19 +1,10 @@
 import React from "react";
-import {
-  Arrow_Right,
-  Book,
-  H_Book,
-  H_Music,
-  H_Path,
-  Music,
-  Path,
-  Smile,
-} from "../assets";
+import { Arrow_Right, Smile } from "../assets";
 import { Information, fadeIn } from "../constants/constants";
 import { motion } from "framer-motion";
 
 const OnBoardingBox = ({ index, icon, title, subtitle }) => {
-  console.log(title);
+  /* Fade in course box from right with delay*/
   return (
     <motion.div
       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}

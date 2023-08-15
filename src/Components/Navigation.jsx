@@ -8,6 +8,7 @@ import {
   Arrow_Right,
 } from "../assets/";
 
+// Search Bar Opens Only on Mobile screen - Link with mobile version of search icon
 const SearchBar = ({ handleOpenSearchBar }) => (
   <div className="bg-primary-light py-1.5 px-8">
     <div className=" items-center w-full flex gap-4">
@@ -30,13 +31,15 @@ const SearchBar = ({ handleOpenSearchBar }) => (
     </div>
   </div>
 );
+
 const Navigation = ({ toggleMobileBar }) => {
   const [openSearchBar, setOpenSearchBar] = React.useState(false);
 
+  // Toggle Mobile Bar
   const handleOpenSearchBar = () => {
     setOpenSearchBar(!openSearchBar);
   };
-
+  // Display Search Icon on mobile screen
   if (openSearchBar) {
     console.log("test");
     return <SearchBar handleOpenSearchBar={handleOpenSearchBar} />;
@@ -44,6 +47,8 @@ const Navigation = ({ toggleMobileBar }) => {
   return (
     <div className=" bg-primary-light py-1.5 flex justify-between items-center px-5 sm:px-8 z-[500]">
       <div className="flex gap-2 md:gap-8 items-center cursor-pointer">
+        {/* Display Menu on mobile screen */}
+        {/* Open mobile sidebar */}
         <img
           src={Menu}
           alt=""
@@ -61,13 +66,15 @@ const Navigation = ({ toggleMobileBar }) => {
         </div>
       </div>
       <div className="flex items-center">
+        {/* Display Search Icon on mobile screen */}
+        {/* Open search bar on click */}
         <img
           src={Search}
           alt="Search"
           className="block sm:hidden mr-[10px] cursor-pointer hover:bg-gray-500 rounded-full p-2 hover:bg-opacity-30 transition-all duration-500 ease-in-out h-9 w-9"
           onClick={() => handleOpenSearchBar()}
         />
-
+        {/* Hide Search Icon on mobile screen */}
         <div className="hidden sm:flex w-[250px] h-10 bg-primary-dark items-center gap-2 px-5 rounded-[5px] mr-[30px]">
           <img src={Search} alt="" />
           <input

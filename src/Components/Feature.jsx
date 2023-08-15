@@ -1,7 +1,7 @@
 import React from "react";
 import { FeatureImg } from "../assets";
 
-const Shop = () => {
+const Feature = () => {
   return (
     <div className="px-8">
       <div
@@ -20,34 +20,8 @@ const Shop = () => {
           </a>
         </div>
       </div>
-      {/* <div className="shop-item shop-item-1 p-7 flex flex-col justify-center items-start ">
-        <div className="flex flex-col justify-center items-start gap-4">
-          <h3 className="text-white text-[19px] font-semibold w-[45%]">
-            Buy Quality Cheap Musical Instrument and get it delivered in 1-2days
-          </h3>
-          <a
-            href="#"
-            className="py-2 px-10 bg-white text-black rounded-3xl font-bold text-[15px]"
-          >
-            Coming Soon
-          </a>
-        </div>
-      </div>
-      <div className="shop-item shop-item-1 p-7 flex flex-col justify-center items-start ">
-        <div className="flex flex-col justify-center items-start gap-4">
-          <h3 className="text-white text-[19px] font-semibold w-[45%]">
-            Buy Quality Cheap Musical Instrument and get it delivered in 1-2days
-          </h3>
-          <a
-            href="#"
-            className="py-2 px-10 bg-white text-black rounded-3xl font-bold text-[15px]"
-          >
-            Coming Soon
-          </a>
-        </div>
-      </div> */}
     </div>
   );
 };
 
-export default Shop;
+export default Feature;

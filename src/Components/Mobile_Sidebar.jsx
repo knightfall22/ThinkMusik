@@ -23,6 +23,9 @@ const Mobile_Sidebar = ({ isMobileBarOpen, setIsMobileBarOpen }) => {
 
   return (
     <div className="">
+      {/* Overlay logic 
+        animation depends isMobileBarOpen state
+      */}
       <motion.div
         className=" h-[100%] fixed bg-black bg-opacity-50 z-[1000] inset-0 overflow-hidden"
         onClick={() => setIsMobileBarOpen(false)}
@@ -31,6 +34,9 @@ const Mobile_Sidebar = ({ isMobileBarOpen, setIsMobileBarOpen }) => {
         animate={isMobileBarOpen ? "visible" : "hidden"}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       ></motion.div>
+      {/* Sidebar display logic 
+          animation depends isMobileBarOpen state 
+      */}
       <motion.div
         className={`bg-primary-light w-[290px] fixed inset-0 z-[2000] `}
         variants={SideVariants}

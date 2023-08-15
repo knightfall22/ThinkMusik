@@ -7,6 +7,7 @@ import {
   SiderBarItemsBottom,
 } from "../constants/constants";
 
+/* Icon Sidebar */
 const Icon_Sidebar = ({
   handleToggle,
   handleMouseEnter,
@@ -53,8 +54,11 @@ const Icon_Sidebar = ({
   </div>
 );
 
+/* Sidebar */
 const SideBar = () => {
+  /* Toggle dictate the currently shown navbar */
   const [toggle, setToggle] = React.useState(false);
+  /* Display icon logic */
   const [hoveredItem, setHoveredItem] = React.useState(null);
   const [breakpoint, setBreakpoint] = React.useState(false);
 
@@ -91,7 +95,9 @@ const SideBar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  {
+    /* Display Icon sidebar depending on toggle state */
+  }
   if (toggle) {
     return (
       <Icon_Sidebar
@@ -119,6 +125,7 @@ const SideBar = () => {
 
       <ul className="mt-3 space-y-1">
         {SiderBarItems.map((item) => (
+          // Change Icon displayed depending on hovered
           <li
             className="py-3.5 pl-10 flex text-[13px] font-medium text-secondary-grey gap-4 items-center menu-item"
             onMouseEnter={() => handleMouseEnter(item.name)}
@@ -149,6 +156,7 @@ const SideBar = () => {
 
       <ul className="mt-3 space-y-1">
         {SiderBarItemsBottom.map((item, index) => (
+          // Change Icon displayed depending on hovered
           <li
             className="py-3.5 pl-10 flex text-[13px] font-medium text-secondary-grey gap-4 items-center menu-item"
             onMouseEnter={() => handleMouseEnter(item.name)}

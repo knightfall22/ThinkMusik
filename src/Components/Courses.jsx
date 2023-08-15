@@ -9,7 +9,9 @@ import {
 import { CourseLists, fadeIn } from "../constants/constants";
 import { motion } from "framer-motion";
 
-const CourseBox = ({ item, title, subtitle, image, index }) => (
+//Individual Course Box
+const CourseBox = ({ title, subtitle, image, index }) => (
+  // Fade in course box from bottom
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     initial="hidden"
@@ -37,6 +39,7 @@ const CourseBox = ({ item, title, subtitle, image, index }) => (
   </motion.div>
 );
 
+/* Course Section */
 const Courses = () => {
   return (
     <div className="px-8">
